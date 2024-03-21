@@ -11,12 +11,12 @@ This ETL mini project focuses on building an Extract, Transform, Load (ETL) pipe
 ## Instructions
 1. Clone the repository to your local machine.
 2. Ensure you have the required dependencies installed, including Python, Pandas, and a Postgres database.
-3. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMhyreHager.ipynb]() step by step to perform the ETL process.
-4. Extracts data from the provided [crowdfunding.xlsx]() and [contacts.xlsx]() files.
+3. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMhyreHager.ipynb](https://github.com/indubt/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Ibandi_EMhyreHager.ipynb) step by step to perform the ETL process.
+4. Extracts data from the provided [crowdfunding.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/crowdfunding.xlsx) and [contacts.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/contacts.xlsx) files.
 5. Transforms the data according to specified requirements.
 6. Creates CSV files for Categories, Subcategories, Campaigns, and Contacts and put them in an Output foler.
-7. Execute the SQL commands in [crowdfunding_db_schema.sql]() to create the necessary tables and constraints in your Postgres database.
-8. Generates an ERD and a table schema for the Postgres database. (You may reference the [screenshots]() folder for a step by step)
+7. Execute the SQL commands in [crowdfunding_db_schema.sql](https://github.com/indubt/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql) to create the necessary tables and constraints in your Postgres database.
+8. Generates an ERD and a table schema for the Postgres database. (You may reference the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step)
 
 ## Contributors
 - Indu Bandi Tulasi: [GitHub Profile](https://github.com/indubt)
