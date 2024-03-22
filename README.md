@@ -20,19 +20,74 @@ This ETL mini project focuses on building an Extract, Transform, Load (ETL) pipe
 ## Instructions
 1. Clone the repository to your local machine.
 2. Ensure you have the required dependencies installed, including Python, Pandas, and a Postgres database.
-4. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMyhreHager.ipynb](https://github.com/indubt/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Ibandi_EMhyreHager.ipynb) step by step to perform the ETL process.
+3. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMyhreHager.ipynb](https://github.com/indubt/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Ibandi_EMhyreHager.ipynb) step by step to perform the ETL process.
 
     a. This Extracts data from the provided [crowdfunding.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/crowdfunding.xlsx) and [contacts.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/contacts.xlsx) files.
-  
+
     b. Transforms the data according to specified requirements.
-  
+
     c. Creates CSV files for Category, Subcategory, Campaign, and Contacts and writes them to the [Output](https://github.com/indubt/Crowdfunding_ETL/tree/main/Output) folder.
 
-5. Designed an [ERD](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/01.ERD.png) and a table schema for the Postgres database using the [QuickDBD](https://app.quickdatabasediagrams.com/#/) tool.
-6. Create a new database in [Postgres](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/02.Create_Database.png).
-7. Execute the SQL commands in [crowdfunding_db_schema.sql](https://github.com/indubt/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql) to create the necessary tables and constraints in your Postgres database. (Refer to screenshots 3, 4, 5, 6, and 7.1-7.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
-8. After the tables are created use the PgAdmin data import functionality to load the CSV files to the appropriate tables in the following order to avoid any foreign key constraint issues: Categories, Subcategories, Contacts, Campaign. (Refer to the screenshots 8.1-8.2 for successful imports in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
-9. Refer to the screenshots 9 and 10.1-10.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder to show each table has the data populated from the CSV files.
+4. Based on the CSV files generated, designed an [ERD](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/01.ERD.png) and a table schema for the Postgres database using the [QuickDBD](https://app.quickdatabasediagrams.com/#/) tool.
+
+    ERD diagram shows that there are 4 tables (contacts, categories, subcategories and campaign). 
+
+      a. Contacts has one-to-one relationship with campaign
+
+      b. Categories has one-to-many relationship with campaign
+      
+      c. Subcategories has one-to-many relationship with campaign
+
+<img src="Screenshots/01.ERD.png"/>
+
+5. Create a new database in Postgres using PgAdmin.
+
+<img src="Screenshots/02.Create_Database.png"/>
+
+6. Screenshot below shows that there are no public tables in the database (Before Table Creation)
+
+<img src="Screenshots/03.Before_Table_Creation.png"/>
+
+7. Execute the SQL commands in [crowdfunding_db_schema.sql](https://github.com/indubt/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql) to create the necessary tables and constraints in your Postgres database.
+
+Screenshot here shows the successful schema creation and the tables created in the public schema.
+
+<img src="Screenshots/04.Schema_Run_Output.png"/>
+
+<img src="Screenshots/05.After_Table_Creation.png"/>
+
+8. Verify the table creation by running a SELECT statement for each table and before data import.
+
+<img src="Screenshots/06.Before_csv_import.png"/>
+
+<img src="Screenshots/07.1.Subcategories_Before_Import.png"/>
+
+<img src="Screenshots/07.2.Contacts_Before_Import.png"/>
+
+<img src="Screenshots/07.3.Categories_Before_Import.png"/>
+
+<img src="Screenshots/07.4.Campaign_Before_Import.png"/>
+
+9. After the tables are created use the PgAdmin data import functionality to load the CSV files to the appropriate tables in the following order to avoid any foreign key constraint issues: Categories, Subcategories, Contacts, Campaign. (Campaign data has to be the last one imported)
+
+Screenshots below shows the successful import of data from csv files
+
+<img src="Screenshots/08.1.Successful_csv_import.png"/>
+
+<img src="Screenshots/08.2.Successful_csv_import_process.png"/>
+
+
+10. Verify that each table has the correct data by running a SELECT statement for each.
+
+<img src="Screenshots/09.After_Csv_Import.png"/>
+
+<img src="Screenshots/10.1.Categories_After_Import.png"/>
+
+<img src="Screenshots/10.2.Subcategories_after_import.png"/>
+
+<img src="Screenshots/10.3.Contacts_After_Import.png"/>
+
+<img src="Screenshots/10.4.Campaign_After_Import.png"/>
 
 ## Contributors
 - Indu Bandi Tulasi: [GitHub Profile](https://github.com/indubt)
