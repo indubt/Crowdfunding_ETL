@@ -20,15 +20,19 @@ This ETL mini project focuses on building an Extract, Transform, Load (ETL) pipe
 ## Instructions
 1. Clone the repository to your local machine.
 2. Ensure you have the required dependencies installed, including Python, Pandas, and a Postgres database.
-3. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMyhreHager.ipynb](https://github.com/indubt/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Ibandi_EMhyreHager.ipynb) step by step to perform the ETL process.
-  a. This Extracts data from the provided [crowdfunding.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/crowdfunding.xlsx) and [contacts.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/contacts.xlsx) files.
-  b. Transforms the data according to specified requirements.
-  c. Creates CSV files for Category, Subcategory, Campaign, and Contacts and writes them to the [Output](https://github.com/indubt/Crowdfunding_ETL/tree/main/Output) folder.
-4. Designed an [ERD](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/01.ERD.png) and a table schema for the Postgres database using the [QuickDBD](https://app.quickdatabasediagrams.com/#/) tool.
-5. Create a new database in [Postgres](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/02.Create_Database.png).
-6. Execute the SQL commands in [crowdfunding_db_schema.sql](https://github.com/indubt/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql) to create the necessary tables and constraints in your Postgres database. (Refer to screenshots 3, 4, 5, 6, and 7.1-7.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
-7. After the tables are created use the PgAdmin data import functionality to load the CSV files to the appropriate tables in the following order to avoid any foreign key constraint issues: Categories, Subcategories, Contacts, Campaign. (Refer to the screenshots 8.1-8.2 for successful imports in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
-8. Refer to the screenshots 9 and 10.1-10.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder to show each table has the data populated from the CSV files.
+4. Execute the code in the Jupyter Notebook [ETL_Mini_Project_Ibandi_EMyhreHager.ipynb](https://github.com/indubt/Crowdfunding_ETL/blob/main/ETL_Mini_Project_Ibandi_EMhyreHager.ipynb) step by step to perform the ETL process.
+
+    a. This Extracts data from the provided [crowdfunding.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/crowdfunding.xlsx) and [contacts.xlsx](https://github.com/indubt/Crowdfunding_ETL/blob/main/Resources/contacts.xlsx) files.
+  
+    b. Transforms the data according to specified requirements.
+  
+    c. Creates CSV files for Category, Subcategory, Campaign, and Contacts and writes them to the [Output](https://github.com/indubt/Crowdfunding_ETL/tree/main/Output) folder.
+
+5. Designed an [ERD](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/01.ERD.png) and a table schema for the Postgres database using the [QuickDBD](https://app.quickdatabasediagrams.com/#/) tool.
+6. Create a new database in [Postgres](https://github.com/indubt/Crowdfunding_ETL/blob/main/Screenshots/02.Create_Database.png).
+7. Execute the SQL commands in [crowdfunding_db_schema.sql](https://github.com/indubt/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql) to create the necessary tables and constraints in your Postgres database. (Refer to screenshots 3, 4, 5, 6, and 7.1-7.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
+8. After the tables are created use the PgAdmin data import functionality to load the CSV files to the appropriate tables in the following order to avoid any foreign key constraint issues: Categories, Subcategories, Contacts, Campaign. (Refer to the screenshots 8.1-8.2 for successful imports in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder for a step by step comparison.)
+9. Refer to the screenshots 9 and 10.1-10.4 in the [screenshots](https://github.com/indubt/Crowdfunding_ETL/tree/main/Screenshots) folder to show each table has the data populated from the CSV files.
 
 ## Contributors
 - Indu Bandi Tulasi: [GitHub Profile](https://github.com/indubt)
